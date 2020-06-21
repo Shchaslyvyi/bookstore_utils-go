@@ -48,3 +48,13 @@ func NewInternalServerError(message string, err error) *RestErr {
 	}
 	return result
 }
+
+// NewNotAuthorizedError function returns the "unauthorized error" error
+func NewNotAuthorizedError(message string) *RestErr {
+	result := &RestErr{
+		Message: "enable to retrieve user information from givet access token",
+		Status:  http.StatusUnauthorized,
+		Error:   "unauthorized",
+	}
+	return result
+}
