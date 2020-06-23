@@ -74,6 +74,11 @@ func getOutput() string {
 	return output
 }
 
+// GetLogger func
+func GetLogger() bookstoreLogger {
+	return log
+}
+
 // getLevel func returns the level atomic const
 func getLevel() zapcore.Level {
 	return zap.InfoLevel
